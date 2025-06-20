@@ -40,7 +40,7 @@ async def cmd_start(message: types.Message):
     elif role == "teacher":
         await message.answer("Добро пожаловать, преподаватель!", reply_markup=teacher_main_menu())
     else:
-        await message.answer("Добро пожаловать, студент!", reply_markup=student_main_menu())
+        await message.answer("Изменение", reply_markup=student_main_menu())
 
 @router.message(Command("role"))
 async def cmd_role(message: types.Message):
