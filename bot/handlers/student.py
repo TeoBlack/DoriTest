@@ -47,7 +47,7 @@ user_flashcards = {}
 
 @router.message(F.text.lower() == "/menu_student")
 async def show_student_menu(message: types.Message):
-    await message.answer("Выберите действие:", reply_markup=student_main_menu())
+    await message.answer("Выберите action you know:", reply_markup=student_main_menu())
 
 @router.callback_query(F.data == "student_start_edit")
 async def student_prompt_edit(callback: types.CallbackQuery, state: FSMContext):
